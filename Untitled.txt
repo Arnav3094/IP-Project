@@ -1,0 +1,172 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Spotify API vid => https://youtu.be/xdq6Gz33khQ\
+Spotify API Docs =>\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}https://developer.spotify.com/documentation/web-api/quick-start/\
+{\listtext	\uc0\u8226 	}https://developer.spotify.com/documentation/web-api/reference/\
+{\listtext	\uc0\u8226 	}https://developer.spotify.com/documentation/general/guides/authorization-guide/\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+inspiration =>\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	\uc0\u8226 	}https://www.kaggle.com/bricevergnou/spotify-recommendation\
+{\listtext	\uc0\u8226 	}https://www.kaggle.com/aeryan/spotify-music-analysis/data\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+general =>\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls3\ilvl0\cf0 {\listtext	\uc0\u8226 	}https://docs.python.org/3/library/pprint.html\
+{\listtext	\uc0\u8226 	}https://stackoverflow.com/questions/12453580/how-to-concatenate-items-in-a-list-to-a-single-string\
+{\listtext	\uc0\u8226 	}https://www.youtube.com/watch?v=RSl87lqOXDE&t=78s\
+{\listtext	\uc0\u8226 	}https://www.geeksforgeeks.org/python-merging-two-dictionaries/\
+{\listtext	\uc0\u8226 	}https://stackoverflow.com/questions/31328861/python-pandas-replacing-header-with-top-row\
+{\listtext	\uc0\u8226 	}https://realpython.com/pandas-sort-python/#sorting-the-columns-of-your-dataframe\
+{\listtext	\uc0\u8226 	}https://stackoverflow.com/questions/13148429/how-to-change-the-order-of-dataframe-columns\
+{\listtext	\uc0\u8226 	}https://www.purplefrogsystems.com/blog/2020/07/how-to-delay-a-python-loop/\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+TnC =>\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls4\ilvl0\cf0 {\listtext	\uc0\u8226 	}country set to US\
+{\listtext	\uc0\u8226 	}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b\fs32 \cf0 Artists =>
+\f0\b0\fs24 \
+\
+The Weeknd\
+Kanye West\
+Drake\
+Joyner Lucas\
+Eminem\
+J. Cole\
+Kendrick Lamar\
+Logic\
+Meek Mill\
+50 Cent\
+Rihanna\
+Nicki Minaj\
+Cardi B\
+Travis Scott\
+Juice WRLD\
+Post Malone\
+Machine Gun Kelly\
+Closed on Sunday\
+Powfu\
+Kid Cudi\
+The Kid LAROI\
+A$AP Rocky\
+DJ Khaled\
+Dr. Dre\
+2pac\
+The Notorious B.I.G.\
+JAY-Z\
+Pusha-T\
+Joey Bada$$\
+Tech N9ne\
+Hopsin\
+XXXTENTACION\
+21 Savage\
+
+\f1\b -33-\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 RxseBoy\
+Denzel Curry\
+AURORA\
+G-Eazy\
+SZA\
+Wiz Khalifa\
+Lukas Graham\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b \cf0 -7-\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 \
+Queen\
+The Beatles\
+Michael Jackson\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b \cf0 -3-
+\f0\b0 \
+\
+Glass Animals\
+Taylor Swift\
+Imagine Dragons\
+Coldplay\
+Halsey\
+Eden\
+Kodaline\
+Josh Radnor\
+X Ambassadors\
+Hozier\
+
+\f1\b -10-\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 \
+The Chainsmokers\
+Avicii\
+Dj Snake\
+Martin Garrix\
+Skrillex\
+20syl\
+alltta\
+odesza\
+Kygo\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b \cf0 -9-\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 \
+Ed Sheeran\
+Maren Morris\
+Bastille\
+Billie Eilish\
+Bazzi\
+Duncan Laurence\
+Dempsey Hope\
+Christian French\
+Miley Cyrus\
+Frank Ocean\
+Ellie goulding\
+Camila Cabello\
+Alec Benjamin\
+Bruno Mars\
+Lauv\
+Blackbear\
+Selena Gomez\
+Harry Styles\
+Maroon 5\
+Jon Bellion\
+Sam Fischer\
+JP Saxe\
+Alessia Cara\
+Ariana Grande\
+Justin Bieber\
+Anson Seabra\
+Justin Timberlake\
+Khalid\
+6LACK\
+Dean Lewis\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b \cf0 -30-}
