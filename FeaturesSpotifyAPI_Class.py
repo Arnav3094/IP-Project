@@ -81,7 +81,13 @@ class FeaturesSpotifyAPI(SpotifyAPI):
             endpoint = f"https://api.spotify.com/v1/audio-features/{id_}"
             r = requests.get(endpoint, headers=self.headers)
             d = r.json()
-            # to_del = map(str, 'uri duration_ms track_href type'.split()) # this line glitches sometime when uri is included in the map object
+            try:
+                to_del = map(str, 'analysis_url uri duration_ms track_href type'.split())  # this line glitches sometime when uri is included in the map object
+                for x in to_del:
+                    del d[x]
+            except Exception as e:
+                print(str(e))
+
             # analysis_url
             # del d['duration_ms']
             # del d['track_href']
