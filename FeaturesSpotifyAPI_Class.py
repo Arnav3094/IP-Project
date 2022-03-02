@@ -111,4 +111,5 @@ class FeaturesSpotifyAPI(SpotifyAPI):
 
     def get_df(self):
         self.df = DF(self.top_track_details)
+        print("DataFrame Created\n")
         return self.df
