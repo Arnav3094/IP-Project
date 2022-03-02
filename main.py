@@ -12,8 +12,9 @@ from pandas import DataFrame as DF
 from pandas import Series as S
 import numpy as np
 import json
-
 import time
+
+from matplotlib import pyplot as py
 
 client_id = '602ac06174344597a70ddd9949e97f50'
 client_secret = '286a7572b3e944ff9708690eaaa4b8f2'
