@@ -34,3 +34,8 @@ if __name__ == '__main__':
     spotify.get_combined()
     df = spotify.get_df()
     df.to_csv('music_data.csv')
+
+df = pd.read_csv('music_data.csv')
+mean_df = df.groupby("artist").mean()
+mean_df.drop('Unnamed: 0', 1, inplace=True)
+mean_df.to_csv('music_data_by_artist.csv')
