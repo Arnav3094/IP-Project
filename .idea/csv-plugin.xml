@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/music_data_by_artist.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/spotify_song_attributes.csv">
           <value>
             <Attribute>
