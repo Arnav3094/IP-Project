@@ -1,8 +1,8 @@
 from create import *
 import create
 
-df = main.df
-mean_df = main.mean_df
+df = create.df
+mean_df = create.mean_df
 
 py.hist(df.popularity, bins=range(40, 98, 2), color='#FFBA71')
 py.xticks(range(40, 100, 5))
