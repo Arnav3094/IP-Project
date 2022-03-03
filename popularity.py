@@ -1,5 +1,5 @@
-from main import *
-import main
+from create import *
+import create
 
 df = main.df
 mean_df = main.mean_df
