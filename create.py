@@ -15,6 +15,9 @@ import json
 import time
 
 from matplotlib import pyplot as py
+from matplotlib.ticker import MultipleLocator, AutoMinorLocator
+from functools import reduce
+import operator
 
 client_id = '602ac06174344597a70ddd9949e97f50'
 client_secret = '286a7572b3e944ff9708690eaaa4b8f2'

@@ -1,5 +1,3 @@
-from matplotlib.ticker import MultipleLocator, AutoMinorLocator
-
 from create import *
 import create
 
