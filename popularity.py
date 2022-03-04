@@ -4,6 +4,7 @@ import create
 df = create.df
 mean_df = create.mean_df
 
+py.figure(dpi=300)
 py.hist(df.popularity, bins=range(40, 98, 2), color='#FFBA71')
 py.xticks(range(40, 100, 5))
 py.title("Distribution of Popularity of Tracks")
@@ -14,6 +15,7 @@ py.xlabel("Popularity")
 py.savefig('popularity_hist')
 py.close()
 
+py.figure(dpi=300)
 py.hist(mean_df.popularity, bins=range(40, 100, 5))
 py.title("Distribution of Average Popularity of Artists (by top 10 tracks)")
 py.xticks(range(40, 100, 5))
@@ -25,6 +27,7 @@ py.savefig('popularity_artists_hist')
 py.close()
 
 sorted_mean_df = mean_df.sort_values(by=['popularity'], ascending=False)
+py.figure(dpi=300)
 py.plot(sorted_mean_df.iloc[:10, 1], marker='.', color='orange', markersize=10)
 py.title("Popularity of top 10 Artists (by top 10 tracks)")
 py.xticks(fontsize=7, rotation=-20)
