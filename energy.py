@@ -23,10 +23,9 @@ py.close()
 
 x1 = range(5, 105, 10)
 py.figure(dpi=450, figsize=(10, 5))
-py.bar(x1, df_sorted_energy.energy.iloc[0:10], width=5)
+py.bar(x1, df_sorted_energy.energy.iloc[0:10], width=5, color='#FFE695')
 py.axis(ymin=0.95, ymax=1)
 names = list(df_sorted_energy.name.iloc[0:10])
-# names_new = [re.sub("(.{10})", "\\1\n", label, 0, re.DOTALL) for label in names]
 names_new = []
 for name in names:
     words = name.split(" ")
@@ -37,3 +36,16 @@ py.xticks(x1, names_new, fontsize=6.5)
 py.title("Most Energetic Songs")
 py.ylabel("Energy")
 py.savefig('energy_bar_top10')
+py.grid(axis='y')
+py.close()
+
+py.figure(dpi=450, figsize=(7, 4))
+py.bar(x1, mean_df_sorted_energy.energy.iloc[0:10], width=5, color='#FF005D')
+artists = mean_df_sorted_energy.iloc[0:10, 1:2].index
+py.xticks(x1, artists, fontsize=6.5)
+py.title("Most Energetic Artists")
+py.ylabel("Energy")
+py.axis(ymin=0.75, ymax=0.9)
+py.grid(axis='y')
+py.gca().yaxis.set_minor_locator(AutoMinorLocator())
+py.savefig('energy_bar_artists_top10')
