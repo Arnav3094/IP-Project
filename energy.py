@@ -20,3 +20,20 @@ py.ylabel("Number of Tracks")
 py.xticks(pd.Series(range(0, 21))/20, fontsize=7)
 py.savefig('energy_hist')
 py.close()
+
+x1 = range(5, 105, 10)
+py.figure(dpi=450, figsize=(10, 5))
+py.bar(x1, df_sorted_energy.energy.iloc[0:10], width=5)
+py.axis(ymin=0.95, ymax=1)
+names = list(df_sorted_energy.name.iloc[0:10])
+# names_new = [re.sub("(.{10})", "\\1\n", label, 0, re.DOTALL) for label in names]
+names_new = []
+for name in names:
+    words = name.split(" ")
+    names_new.append([" ".join(words[i:i+2]) for i in range(0, len(words), 2)])
+for name in names_new:
+    names_new[names_new.index(name)] = str.join("\n", name)
+py.xticks(x1, names_new, fontsize=6.5)
+py.title("Most Energetic Songs")
+py.ylabel("Energy")
+py.savefig('energy_bar_top10')
