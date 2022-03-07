@@ -35,8 +35,8 @@ for name in names_new:
 py.xticks(x1, names_new, fontsize=6.5)
 py.title("Most Energetic Songs")
 py.ylabel("Energy")
-py.savefig('energy_bar_top10')
 py.grid(axis='y')
+py.savefig('energy_bar_top10')
 py.close()
 
 py.figure(dpi=450, figsize=(7, 4))
