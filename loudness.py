@@ -8,8 +8,6 @@ mean_df_sorted_loudness = mean_df.sort_values(by=['loudness'], ascending=False)
 
 py.figure(dpi=450)
 py.hist(df_sorted_loudness.loudness, bins=range(-23, 0, 1), rwidth=0.7, color='#51A063')
-py.plot()
-py.plot()
 py.axis(xmax=0, xmin=-23)
 ax = py.gca()
 ax.yaxis.tick_right()
