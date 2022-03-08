@@ -49,16 +49,13 @@ py.figure(dpi=450)
 py.bar(x1, mean_df_sorted_liveness.liveness.iloc[0:10], width=5, color='#00A995')
 artists = list(mean_df_sorted_liveness.iloc[0:10, 1:2].index)
 try: artists[artists.index("Joey Bada$$")] = "Joey Badass"
-except ValueError:
-    pass
-except Exception as e:
-    print(e)
+except ValueError: pass
+except Exception as e: print(e)
 artists_new = []
 for artist in artists:
     words = artist.split(" ")
     artists_new.append([" ".join(words[i:i + 1]) for i in range(0, len(words), 1)])
-for artist in artists_new:
-    artists_new[artists_new.index(artist)] = str.join("\n", artist)
+for artist in artists_new: artists_new[artists_new.index(artist)] = str.join("\n", artist)
 py.xticks(x1, artists_new, fontsize=7)
 py.title("Artists with the Highest Liveness")
 py.ylabel("Liveness (out of 100)")
