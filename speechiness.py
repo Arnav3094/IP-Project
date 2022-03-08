@@ -49,9 +49,10 @@ py.figure(dpi=450)
 py.bar(x1, mean_df_sorted_speechiness.speechiness.iloc[0:10], width=5, color='#00A995')
 artists = list(mean_df_sorted_speechiness.iloc[0:10, 1:2].index)
 try: artists[artists.index("Joey Bada$$")] = "Joey Badass"
+except ValueError:
+    pass
 except Exception as e:
-    if e is not ValueError:
-        print(e)
+    print(e)
 artists_new = []
 for artist in artists:
     words = artist.split(" ")
