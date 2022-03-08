@@ -15,7 +15,7 @@ import json
 import time
 
 from matplotlib import pyplot as py
-from matplotlib.ticker import MultipleLocator, AutoMinorLocator
+from matplotlib.ticker import MultipleLocator, AutoMinorLocator, ScalarFormatter, NullFormatter, FormatStrFormatter
 from functools import reduce
 import operator
 
