@@ -36,7 +36,7 @@ for name in names:
 for name in names_new:
     names_new[names_new.index(name)] = str.join("\n", name)
 py.xticks(x1, names_new, fontsize=6)
-py.title("Songs with highest Speechiness")
+py.title("Songs with the Highest Speechiness")
 py.ylabel("Speechiness")
 py.grid(axis='y')
 ax = py.gca()
@@ -60,7 +60,7 @@ for artist in artists_new:
     artists_new[artists_new.index(artist)] = str.join("\n", artist)
 py.xticks(x1, artists_new, fontsize=7)
 py.yticks(range(20, 33))
-py.title("Artists with highest Speechiness")
+py.title("Artists with the Highest Speechiness")
 py.ylabel("Speechiness")
 py.axis(ymin=20, ymax=32)
 py.grid(axis='y')
