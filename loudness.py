@@ -33,8 +33,7 @@ names_new = []
 for name in names:
     words = name.split(" ")
     names_new.append([" ".join(words[i:i+2]) for i in range(0, len(words), 2)])
-for name in names_new:
-    names_new[names_new.index(name)] = str.join("\n", name)
+for name in names_new: names_new[names_new.index(name)] = str.join("\n", name)
 py.xticks(x1, names_new, fontsize=6.5)
 py.title("Loudest Songs")
 py.ylabel("Loudness")
