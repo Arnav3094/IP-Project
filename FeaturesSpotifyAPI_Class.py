@@ -87,14 +87,8 @@ class FeaturesSpotifyAPI(SpotifyAPI):
                     del d[x]
             except Exception as e:
                 print(str(e))
-
-            # analysis_url
-            # del d['duration_ms']
-            # del d['track_href']
-            # del d['type']
             counter += 1
             self.top_track_features.append(d)
-
             # To show us the progress
             if (index + 1) % 50 == 0:
                 print(f'[{index + 1}]')
