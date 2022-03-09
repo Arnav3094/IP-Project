@@ -13,7 +13,7 @@ py.yticks(range(0, 130, 10))
 ax = py.gca()
 ax.yaxis.set_minor_locator(AutoMinorLocator())
 py.grid()
-py.axis(xmin=0, xmax=1)
+py.axis(xmin=0, xmax=1, ymax=120)
 py.title("Distribution of Energy")
 py.xlabel("Energy")
 py.ylabel("Number of Tracks")
@@ -42,7 +42,13 @@ py.close()
 py.figure(dpi=450, figsize=(7, 4))
 py.bar(x1, mean_df_sorted_energy.energy.iloc[0:10], width=5, color='#FF005D')
 artists = mean_df_sorted_energy.iloc[0:10, 1:2].index
-py.xticks(x1, artists, fontsize=6.5)
+artists_new = []
+for artist in artists:
+    words = artist.split(" ")
+    artists_new.append([" ".join(words[i:i + 1]) for i in range(0, len(words), 1)])
+for artist in artists_new:
+    artists_new[artists_new.index(artist)] = str.join("\n", artist)
+py.xticks(x1, artists_new, fontsize=7)
 py.title("Most Energetic Artists")
 py.ylabel("Energy")
 py.axis(ymin=0.75, ymax=0.9)

@@ -59,7 +59,7 @@ for artist in artists_new: artists_new[artists_new.index(artist)] = str.join("\n
 py.xticks(x1, artists_new, fontsize=7)
 py.title("Artists with the Highest Liveness")
 py.ylabel("Liveness (out of 100)")
-py.axis(ymin=27.5, ymax=37.5)
+py.axis(ymin=27, ymax=37.5)
 py.yticks(np.array(range(55, 76, 5))/2)
 py.grid(axis='y', which='major')
 py.grid(axis='y', which='minor', linewidth=0.3)

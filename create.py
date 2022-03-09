@@ -29,7 +29,8 @@ artists += list(map(str, 'Ed Sheeran,Bastille,Billie Eilish,Duncan Laurence,Demp
 artists += list(map(str, 'One Direction,Katy Perry,Lady Gaga,Beyonce,Shawn Mendes,Sam Smith,Mac Miller,Linkin Park,Britney Spears,Alicia Keys,Black Eyed Peas,Green Day,Denzel Curry,AURORA,SZA,Lukas Graham'.split(',')))
 artists += list(map(str, 'Bon Jovi,Sting,Backstreet Boys,Whitney Houston,David Bowie,AC/DC,Elvis Presley,Elton John,John Lennon,Bob Marley,ABBA,Paul McCartney,Adele,Dua Lipa'.split(',')))
 
-if __name__ == '__main__':
+
+def main_():
     spotify = FeaturesSpotifyAPI(client_id, client_secret, artists)
     spotify.auth()
     spotify.get_artist_ids()
@@ -38,6 +39,10 @@ if __name__ == '__main__':
     spotify.get_combined()
     df = spotify.get_df()
     df.to_csv('music_data.csv')
+
+
+if __name__ == '__main__':
+    main_()
 
 df = pd.read_csv('music_data.csv')
 mean_df = df.groupby("artist").mean()
