@@ -18,7 +18,7 @@ py.ylabel("No. of Songs")
 py.title("Distribution of Duration")
 py.grid(which='major', color='#777777')
 py.grid(which='minor', color='#ACACAC', linestyle='dashed', linewidth=0.3)
-py.savefig('duration')
+py.savefig('duration_hist')
 py.close()
 
 
@@ -34,4 +34,4 @@ py.title("Artists with Highest Average Duration")
 py.ylabel("Duration (in s)")
 ticks = [x if x != "The Notorious B.I.G." else "Biggie" for x in mean_df_sorted_duration.duration_sec.iloc[0:10].index]
 py.xticks(x, ticks, fontsize=6, rotation=-15)
-py.savefig('duration_bar_avg')
+py.savefig('duration_bar_artists_top10')
