@@ -16,17 +16,14 @@ main_menu = """Main Menu:
 13. Acousticness Menu     14. Instrumentalness Menu
 15. Liveness Menu         16. Tempo Menu
 To exit any menu press 'q' or 'Q'"""
-popularity_menu = "\nPopularity Menu:\n1. Show Track Popularity Distribution\t\t2. Show Artist Popularity Distribution\n3. Show Artists with Highest Popularity\t\t4. Show Songs with Highest Popularity"
-duration_menu = "\nDuration Menu:\n1. Show Duration Distribution Histogram\t\t2. Show Artists with Highest Average Duration\n"
-danceability_menu = "\nDanceability Menu:\n1. Show Danceability Distribution Histogram\t\t2. Show Songs with the Highest Danceability\n3. Show Artists with the Highest Danceability\n"
-energy_menu = "\nEnergy Menu:\n1. Show Energy Distribution Histogram\t\t2. Show Songs with the Highest Energy\n3. Show Artists with the Highest Energy\n"
-loudness_menu = "\nLoudness Menu:\n1. Show Loudness Distribution Histogram\t\t2. Show Loudest Songs\n3. Show Loudest Artists\n"
-speechiness_menu = "\nSpeechiness Menu:\n1. Show Speechiness Distribution Histogram\t\t2. Show Songs with the Highest Speechiness\n3. Show Artists with the Highest Speechiness\n"
-acousticness_menu = "\nAcousticness Menu:\n1. Show Acousticness Distribution Histogram\t\t2. Show Songs with the Highest Acousticness\n3. Show Artists with the Highest Acousticness\n"
-instrumentalness_menu = "\nInstrumentalness Menu:\n1. Show Instrumentalness Distribution Histogram\t\t2. Show Songs with the Highest Instrumentalness\n3. Show Artists with the Highest Instrumentalness\n"
-liveness_menu = "\nLiveness Menu:\n1. Show Liveness Distribution Histogram\t\t2. Show Songs with the Highest Liveness\n3. Show Artists with the Highest Liveness\n"
-valence_menu = "\nValence Menu:\n1. Show Valence Distribution Histogram\t\t2. Show Songs with the Highest Valence\n3. Show Artists with the Highest Valence\n"
-tempo_menu = "\nTempo Menu:\n1. Show Tempo Distribution Histogram\t\t2. Show Songs with the Highest Tempo\n3. Show Artists with the Highest Tempo\n"
+popularity_menu = "\nPopularity Menu:\n1. Show Track Popularity Distribution\t\t2. Show Artist Popularity Distribution\n3. Show Artists with Highest Popularity\t\t4. Show Songs with Highest Popularity\n>>>"
+duration_menu = "\nDuration Menu:\n1. Show Duration Distribution Histogram\t\t2. Show Artists with Highest Average Duration\n>>>"
+loudness_menu = "\nLoudness Menu:\n1. Show Loudness Distribution Histogram\t\t2. Show Loudest Songs\n3. Show Loudest Artists\n>>>"
+tempo_menu = "\nTempo Menu:\n1. Show Tempo Distribution Histogram\t\t2. Show Fastest Songs\n3. Show Slowest Songs\n>>>"
+
+
+def menu(dpnt: str):
+    return f"\n{dpnt} Menu:\n1. Show {dpnt} Distribution Histogram\t\t2. Show Songs with the Highest {dpnt}\n3. Show Artists with the Highest {dpnt}\n>>>"
 
 
 def show_df():
@@ -130,7 +127,7 @@ def show_duration():
             py.title("Distribution of Duration")
             py.grid(which='major', color='#777777')
             py.grid(which='minor', color='#ACACAC', linestyle='dashed', linewidth=0.3)
-            py.savefig('duration')
+            py.savefig('duration_hist')
             py.close()
             print("Graph saved in enclosing folder and opened in new window")
             img.open('duration_hist.png').show()
@@ -148,7 +145,7 @@ def show_duration():
             ticks = [x if x != "The Notorious B.I.G." else "Biggie" for x in
                      mean_df_sorted_duration.duration_sec.iloc[0:10].index]
             py.xticks(x, ticks, fontsize=6, rotation=-15)
-            py.savefig('duration_bar_avg')
+            py.savefig('duration_bar_artists_top10')
             print("Graph saved in enclosing folder and opened in new window")
             img.open('duration_bar_artists_top10.png').show()
         else:
@@ -233,7 +230,7 @@ def show_tempo():
 def show_danceability():
     inp_ = 0
     while inp_ not in ['Q', 'q']:
-        inp_ = input(danceability_menu)
+        inp_ = input(menu("Danceability"))
         if inp_ in ['Q', 'q']: break
         elif inp_ == '1':
             danceability.danceability_hist()
@@ -256,7 +253,7 @@ def show_energy():
     df_sorted_energy = df.sort_values(by=['energy'], ascending=False)
     mean_df_sorted_energy = mean_df.sort_values(by=['energy'], ascending=False)
     while inp_ not in ['Q', 'q']:
-        inp_ = input(energy_menu)
+        inp_ = input(menu("Energy"))
         if inp_ in ['Q', 'q']: break
         elif inp_ == '1':
             py.figure(dpi=450)
@@ -389,7 +386,7 @@ def show_valence():
     df_sorted_valence.valence *= 100
     mean_df_sorted_valence *= 100
     while inp_ not in ['Q', 'q']:
-        inp_ = input(valence_menu)
+        inp_ = input(menu("Valence"))
         if inp_ in ['Q', 'q']: break
         elif inp_ == '1':
             py.figure(dpi=450)
@@ -466,7 +463,7 @@ def show_speechiness():
     df_sorted_speechiness.speechiness *= 100
     mean_df_sorted_speechiness *= 100
     while inp_ not in ['Q', 'q']:
-        inp_ = input(speechiness_menu)
+        inp_ = input(menu("Speechiness"))
         if inp_ in ['Q', 'q']: break
         elif inp_ == '1':
             py.figure(dpi=450)
@@ -544,7 +541,7 @@ def show_acousticness():
     df_sorted_acousticness.acousticness *= 100
     mean_df_sorted_acousticness *= 100
     while inp_ not in ['Q', 'q']:
-        inp_ = input(acousticness_menu)
+        inp_ = input(menu("Acousticness"))
         if inp_ in ['Q', 'q']: break
         elif inp_ == '1':
             py.figure(dpi=450)
@@ -625,7 +622,7 @@ def show_instrumentalness():
     df_sorted_instrumentalness.instrumentalness *= 100
     mean_df_sorted_instrumentalness *= 100
     while inp_ not in ['Q', 'q']:
-        inp_ = input(instrumentalness_menu)
+        inp_ = input(menu("Instrumentalness"))
         if inp_ in ['Q', 'q']: break
         elif inp_ == '1':
             py.figure(dpi=450, figsize=(6, 7))
@@ -704,7 +701,7 @@ def show_liveness():
     df_sorted_liveness.liveness *= 100
     mean_df_sorted_liveness *= 100
     while inp_ not in ['Q', 'q']:
-        inp_ = input(liveness_menu)
+        inp_ = input(menu("Liveness"))
         if inp_ in ['Q', 'q']: break
         elif inp_ == '1':
             py.figure(dpi=450)
@@ -848,9 +845,9 @@ def show_popularity():
 
 
 x1 = range(5, 105, 10)
-d = {1: show_df, 2: show_artist, 3: show_mode, 4: show_release_date, 5: show_key, 6: show_popularity, 7: show_duration,
-     8: show_danceability, 9: show_energy, 10: show_loudness, 11: show_valence, 12: show_speechiness,
-     13: show_acousticness, 14: show_instrumentalness, 15: show_liveness, 16: show_tempo}
+dispatcher = {1: show_df, 2: show_artist, 3: show_mode, 4: show_release_date, 5: show_key, 6: show_popularity, 7: show_duration,
+              8: show_danceability, 9: show_energy, 10: show_loudness, 11: show_valence, 12: show_speechiness,
+              13: show_acousticness, 14: show_instrumentalness, 15: show_liveness, 16: show_tempo}
 
 choices = ['Q', 'q'] + list(range(1, 17)) + list(map(str, range(1, 17)))
 choice = 0
@@ -870,6 +867,6 @@ if __name__ == '__main__':
             print(f"[ERROR] {e}")
             continue
 
-        d[choice]()
+        dispatcher[choice]()
 
     print("[END] Goodbye!")
