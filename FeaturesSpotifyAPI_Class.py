@@ -51,9 +51,7 @@ class FeaturesSpotifyAPI(SpotifyAPI):
         for index, artist_id in enumerate(self.artist_ids):
             endpoint = f'https://api.spotify.com/v1/artists/{artist_id}/top-tracks?market={self.country_code}'
             r = requests.get(endpoint, headers=self.headers)
-            # pp(r.json())
             for d in r.json()['tracks']:
-                # pp(d)
                 d['album_name'] = d['album']['name']
                 d['album_release_date'] = d['album']['release_date']
                 d['album_type'] = d['album']['album_type']
@@ -66,7 +64,6 @@ class FeaturesSpotifyAPI(SpotifyAPI):
                 d['artist'] = self.artists[index]
                 self.track_ids.append(d['id'])
                 self.top_tracks.append(d)
-        # pp(self.track_ids)
         print("Got Top Tracks\n")
         return self.top_tracks
 
